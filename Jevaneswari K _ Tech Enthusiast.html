@@ -1,0 +1,192 @@
+from pathlib import Path
+
+# HTML content for the portfolio website
+html_content = """
+<!DOCTYPE html>
+<html lang="en">
+<head><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jevaneswari K | Tech Enthusiast</title>
+  <style>
+    body {
+      font-family: 'Sans-serif';
+      background-color: #f9f4fc;
+      margin: 0;
+      padding: 0;
+      color: #000000;
+    }
+    header {
+      background-color: #4b3b60;
+      color: #ffffff;
+      padding: 2em 1em;
+      text-align: center;
+    }
+    nav {
+      background-color: #6a4e8a;
+      padding: 1em;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    nav a:hover {
+      color: #d1c4e9;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 2em auto;
+      padding: 0 1em;
+    }
+    section {
+      background: #ffffff;
+      margin-bottom: 2em;
+      padding: 2em;
+      border-left: 5px solid #000000;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+    h2 {
+      color: #000000;
+      border-bottom: 2px solid #cccccc;
+      padding-bottom: 0.4em;
+      margin-bottom: 1em;
+    }
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    ul li {
+      margin-bottom: 0.8em;
+    }
+    ul li strong {
+      color: #000000;
+    }
+    footer {
+      text-align: center;
+      padding: 1em;
+      background-color: #4b3b60;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Jevaneswari K</h1>
+    <p>Tech Enthusiast</p>
+    <p>Email: <a href="mailto:kjevaneswari1@gmail.com" style="color:#d1c4e9">kjevaneswari1@gmail.com</a> | Phone: 9342942205</p>
+  </header>
+
+  <nav>
+    <a href="#profile">Profile</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certificates">Courses</a>
+    <a href="#workshops">Workshops</a>
+    <a href="#internships">Internships</a>
+    <a href="#extras">Extra-Curriculars</a>
+    <a href="#languages">Languages</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+    <section id="profile">
+      <h2>Profile</h2>
+      <p>To establish a career as a software developer, continuously enhance my coding skills, and contribute to solving real-world challenges through innovative solutions.</p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>B.E - Electrical and Electronics Engineering</strong>, CK College of Engineering and Technology, 2021–2025 – CGPA: 8.81 (88.1%)</li>
+        <li><strong>HSC</strong>, St Anne's Girls Higher Secondary School, 2019–2021 – 88.5%</li>
+        <li><strong>SSLC</strong>, Rathna Matric Higher Secondary School, 2018–2019 – 84.2%</li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <p><strong>Programming Languages:</strong> Python, C, Java</p>
+      <p><strong>Web Technologies:</strong> HTML, CSS</p>
+      <p><strong>Tools:</strong> Power BI, Microsoft PowerPoint</p>
+      <p><strong>Soft Skills:</strong> Planning, Prioritization, Self-Motivation, Confidence, Active Listening</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Portable Smart Weather Monitoring System:</strong> Designed an embedded IoT-based device that uses environmental sensors to track temperature, humidity, pressure, and light intensity in real-time.</li>
+        <li><strong>Vehicle-to-Vehicle Communication using Li-Fi Technology:</strong> Developed a real-time communication system between vehicles using light signals. Focuses on enhancing road safety and smart transport systems.</li>
+        <li><strong>Portfolio Website:</strong> A custom personal website created using HTML and CSS to professionally display skills, education, and project experience.</li>
+      </ul>
+    </section>
+
+    <section id="certificates">
+      <h2>Courses</h2>
+      <ul>
+        <li><strong>The Joy of Computing using Python</strong> - NPTEL, 2022</li>
+        <li><strong>Physics of Renewable Energy Systems</strong> - NPTEL, 2023</li>
+        <li><strong>Introduction to C Programming</strong> - CodeChef, 2024</li>
+        <li><strong>Ethical Hacking</strong> - Internshala, 2025</li>
+        <li><strong>Artificial Intelligence & Machine Learning</strong> - PrepInsta, 2025</li>
+      </ul>
+    </section>
+
+    <section id="workshops">
+      <h2>Workshops</h2>
+      <ul>
+        <li><strong>SPWM Inverter & Transformer Design (4 Days, 2023)</strong> – EmCog Solutions, Chennai</li>
+        <li><strong>4 DOF Pick & Place Robot Arm (5 Days, 2023)</strong> – Embedded & Robotics, Chennai</li>
+      </ul>
+    </section>
+
+    <section id="internships">
+      <h2>Internships</h2>
+      <ul>
+        <li><strong>Siemens Centre of Excellence (Two Weeks, 2023)</strong> – 2D/3D Design, Chennai</li>
+      </ul>
+    </section>
+
+    <section id="extras">
+      <h2>Extra-Curriculars</h2>
+      <ul>
+        <li><strong>Paper Presentation:</strong> Biomaterials, Prosthetic Limbs – CK College</li>
+        <li><strong>Sports:</strong> 400m Relay (3rd Prize)</li>
+        <li><strong>Art & Culture:</strong> Dance and Crafts Participation</li>
+        <li><strong>Public Speaking:</strong> Oratorical & Debate (3rd Prize)</li>
+      </ul>
+    </section>
+
+    <section id="languages">
+      <h2>Languages</h2>
+      <ul>
+        <li><strong>Tamil</strong> – Speak, Read, Write</li>
+        <li><strong>English</strong> – Speak, Read, Write</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p><strong>Email:</strong> <a href="mailto:kjevaneswari1@gmail.com">kjevaneswari1@gmail.com</a></p>
+      <p><strong>Phone:</strong> 9342942205</p>
+      <p><strong>Address:</strong> 12, East Street, Vazhisodhanaipalayam, Cuddalore, Tamil Nadu - 607003</p>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Jevaneswari K
+  </footer>
+</body>
+</html>
+"""
+
+# Save HTML content to a file
+output_file_path = "/mnt/data/index.html"
+Path(output_file_path).write_text(html_content)
+
+output_file_path
